@@ -2,7 +2,6 @@ import { useSelector } from "react-redux"
 
 const TraitSections = () => {
     const allContent = useSelector(state=>state.mainStore)
-    console.log(allContent)
   return (
     <div className="main_width px-5 py-10">
         <div className="max_width_trait flex flex-col">
@@ -14,7 +13,7 @@ const TraitSections = () => {
                         <div className="w-full flex flex-wrap mt-10">
                             {allContent.traits[0].map((item,index)=>{
                                 return (
-                                <div key={index} className="w-1/3 flex gap-3 p-3">
+                                <div key={index} className="md:w-1/3 flex w-1/2 gap-3 p-2">
                                     <div className="w-12 h-12 rounded-full bg-pubblesLightGreen/20"></div>
                                     <div className="flex flex-col">
                                         <h2 className="title text-2xl font-semibold text-pubblesBlue">{item.fields.value}</h2>

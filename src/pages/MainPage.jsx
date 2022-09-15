@@ -5,10 +5,11 @@ import AboutSection from "../components/AboutSection"
 import HeroSection from "../components/HeroSection"
 import Loader from "../components/Loader"
 import Navbar from "../components/Navbar"
+import Roadmap from "../components/Roadmap"
 import Slider from "../components/Slider"
 import TraitEval from "../components/TraitEval"
 import TraitSections from "../components/TraitSections"
-import { setAboutSection, setHeroSection, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection } from "../store/slice"
+import { setAboutSection, setHeroSection, setRoadmap, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection } from "../store/slice"
 
 const MainPage = () => {
   const dispatch = useDispatch()
@@ -26,12 +27,14 @@ const MainPage = () => {
         const traitImg  = await client.getEntries({ content_type: "traitImage" })
         const traitMainImgs  = await client.getEntries({ content_type: "traitsMainImgSection" })
         const traits  = await client.getEntries({ content_type: "traits" })
+        const roadmap  = await client.getEntries({ content_type: "roadmap" })
         dispatch(setHeroSection([heroSection.items]))
         dispatch(setAboutSection([aboutSection.items]))
         dispatch(setTraitEvalSection([traitEval.items]))
         dispatch(setTraitImgSection([traitImg.items]))
         dispatch(setTraitMainImgsSection([traitMainImgs.items]))
         dispatch(setTraitsSection([traits.items]))
+        dispatch(setRoadmap([roadmap.items]))
         setLoader(false)
     }
     getInfo()
@@ -45,6 +48,7 @@ const MainPage = () => {
         <AboutSection/>
         <TraitEval/>
         <TraitSections/>
+        <Roadmap/>
     </div>
   )
 }
