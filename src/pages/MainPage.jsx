@@ -7,7 +7,8 @@ import Loader from "../components/Loader"
 import Navbar from "../components/Navbar"
 import Slider from "../components/Slider"
 import TraitEval from "../components/TraitEval"
-import { setAboutSection, setHeroSection, setTraitEvalSection } from "../store/slice"
+import TraitSections from "../components/TraitSections"
+import { setAboutSection, setHeroSection, setTraitEvalSection, setTraitImgSection } from "../store/slice"
 
 const MainPage = () => {
   const dispatch = useDispatch()
@@ -22,9 +23,11 @@ const MainPage = () => {
         const heroSection  = await client.getEntries({ content_type: "heroSection" })
         const aboutSection  = await client.getEntries({ content_type: "aboutSection" })
         const traitEval  = await client.getEntries({ content_type: "traitEvalSection" })
+        const traitImg  = await client.getEntries({ content_type: "traitImage" })
         dispatch(setHeroSection([heroSection.items]))
         dispatch(setAboutSection([aboutSection.items]))
         dispatch(setTraitEvalSection([traitEval.items]))
+        dispatch(setTraitImgSection([traitImg.items]))
         setLoader(false)
     }
     getInfo()
@@ -37,6 +40,7 @@ const MainPage = () => {
         <Slider/>
         <AboutSection/>
         <TraitEval/>
+        <TraitSections/>
     </div>
   )
 }
