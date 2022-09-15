@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Bobo Amat';
+    src: url(../public/assets/fonts/Bodo\ Amat.ttf) format('truetype');
+    font-weight: normal;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'DMSans';
+    src: url(../public/assets/fonts/DMSans-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'DMSans';
+    src: url(../public/assets/fonts/DMSans-Medium.ttf) format('truetype');
+    font-weight: medium;
+}
+@font-face {
+    font-family: 'DMSans';
+    src: url(../public/assets/fonts/DMSans-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+.main_width {
+    @apply w-full flex
+}
+.max_width {
+    @apply w-full lg:max-w-5xl mx-auto
+}
+.title {
+    font-family: 'Bobo Amat';
+}
+.dm_font {
+    font-family:  'DmSans';
+}
+.btn_shadow {
+    box-shadow: 0px 21px 33px rgba(0, 211, 170, 0.14), inset 1px -7px 13px 5px rgba(255, 255, 255, 0.49), inset 0px 4px 24px 13px rgba(0, 0, 0, 0.23);
 }

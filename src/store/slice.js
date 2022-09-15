@@ -1,0 +1,20 @@
+import { createSlice } from "@reduxjs/toolkit"
+
+const initialState = {
+    heroSection:false,
+    aboutSection:false,
+    traitEvalSection:false
+}
+
+export const Slice = createSlice({
+    name: 'mainStore',
+    initialState,
+    reducers:{
+        setHeroSection: ( state, action ) => { state.heroSection = { ...state.heroSection, ...action.payload } },
+        setAboutSection: ( state, action ) => { state.aboutSection = { ...state.aboutSection, ...action.payload } },
+        setTraitEvalSection: ( state, action ) => { state.traitEvalSection = { ...state.traitEvalSection, ...action.payload } },
+    }
+})
+
+export const { setHeroSection, setAboutSection, setTraitEvalSection } =  Slice.actions
+export default Slice.reducer
