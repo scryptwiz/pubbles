@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        pubblesLightGreen: "#00D2A91A",
         pubblesGreen:"#00D3AA",
         pubblesBlue:"#272A5E",
         pubblesYellow:"#F4CA01"

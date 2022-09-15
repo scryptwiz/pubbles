@@ -24,6 +24,9 @@
 .main_width {
     @apply w-full flex
 }
+.max_width_trait {
+    @apply w-full lg:max-w-4xl mx-auto
+}
 .max_width {
     @apply w-full lg:max-w-5xl mx-auto
 }
