@@ -6,13 +6,13 @@ import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
 import Loader from "../components/Loader"
 import Navbar from "../components/Navbar"
-import NewsLetter from "../components/NewsLetter"
+// import NewsLetter from "../components/NewsLetter"
 import Roadmap from "../components/Roadmap"
-import Slider from "../components/Slider"
+import SliderSection from "../components/SliderSection"
 import TeamSection from "../components/TeamSection"
 import TraitEval from "../components/TraitEval"
 import TraitSections from "../components/TraitSections"
-import { setAboutSection, setHeroSection, setNewsletter, setRoadmap, setTeam, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection } from "../store/slice"
+import { setAboutSection, setHeroSection, setNewsletter, setRoadmap, setSlider, setTeam, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection } from "../store/slice"
 
 const MainPage = () => {
   const dispatch = useDispatch()
@@ -33,6 +33,7 @@ const MainPage = () => {
         const roadmap  = await client.getEntries({ content_type: "roadmap" })
         const team  = await client.getEntries({ content_type: "team" })
         const newsLetter  = await client.getEntries({ content_type: "newsletter" })
+        const slider  = await client.getEntries({ content_type: "slider" })
         dispatch(setHeroSection([heroSection.items]))
         dispatch(setAboutSection([aboutSection.items]))
         dispatch(setTraitEvalSection([traitEval.items]))
@@ -42,6 +43,7 @@ const MainPage = () => {
         dispatch(setRoadmap([roadmap.items]))
         dispatch(setTeam([team.items]))
         dispatch(setNewsletter([newsLetter.items]))
+        dispatch(setSlider([slider.items]))
         setLoader(false)
     }
     getInfo()
@@ -51,7 +53,7 @@ const MainPage = () => {
       {loader&&(<Loader/>)}
         <Navbar/>
         <HeroSection/>
-        <Slider/>
+        <SliderSection/>
         <AboutSection/>
         <TraitEval/>
         <TraitSections/>

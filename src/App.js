@@ -1,3 +1,5 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Provider } from "react-redux"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import MainPage from "./pages/MainPage"
