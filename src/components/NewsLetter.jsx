@@ -5,7 +5,7 @@ const NewsLetter = () => {
   return (
     <div className="main_width relative">
         {allContent.newsLetter&&(
-            <div className="max_width flex z-20 mt-10 lg:p-10 p-5 relative">
+            <div className="max_width hidden  md:flex z-20 mt-10 lg:p-10 p-5 relative">
                 <div className=" w-full h-fit my-auto  relative">
                     <img src={allContent.newsLetter[0][0].fields.image.fields.file.url} className='z-20 lg:w-80 w-72' alt={allContent.newsLetter[0][0].fields.image.fields.title} />
                     <div className="bg-pubblesYellow blueShadow rounded w-[90%] absolute top-10 right-0 zindex flex justify-between">
