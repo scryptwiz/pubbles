@@ -14,7 +14,9 @@ const TraitSections = () => {
                             {allContent.traits[0].map((item,index)=>{
                                 return (
                                 <div key={index} className="md:w-1/3 flex w-1/2 gap-3 p-2">
-                                    <div className="w-12 h-12 rounded-full bg-pubblesLightGreen/20"></div>
+                                    <div className="w-12 h-12 rounded-full bg-pubblesLightGreen/20">{item.fields.image&&(
+                                        <img src={item.fields.image.fields.file.url} className='w-full h-full object-cover rounded-full' alt={item.fields.image.fields.title} />
+                                    )}</div>
                                     <div className="flex flex-col">
                                         <h2 className="title text-2xl font-semibold text-pubblesBlue">{item.fields.value}</h2>
                                         <p className="dm_font text-pubblesBlue break-all">{item.fields.trait}</p>

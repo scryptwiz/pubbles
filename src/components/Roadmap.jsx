@@ -2,9 +2,8 @@ import { useSelector } from "react-redux"
 
 const Roadmap = () => {
   const allContent = useSelector(state=>state.mainStore)
-  console.log(allContent)
   return (
-    <div className="main_width relative">
+    <div className="main_width relative" id="roadmap">
         <img src="/assets/images/ellipse.png" className="object-cover w-full h-full absolute top-0 left-0" alt="ellipse" />
         {allContent.roadmap&&(
           <div className="max_width_trait flex flex-col z-20 mt-10 lg:p-10 p-5">

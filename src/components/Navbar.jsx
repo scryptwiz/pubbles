@@ -21,9 +21,9 @@ const Navbar = () => {
                         <div className="w-10/12 bg-white flex flex-col items-start gap-10  px-5 py-7 h-full">
                             <img src="/assets/logos/logo.png" alt="Pubbles Logo" className="h-6" />
                             <ul className="flex flex-col  gap-5 text-sm text-pubblesBlue">
-                                <li onClick={()=>setToggle(false)}><Link to='/'>About</Link></li>
-                                <li onClick={()=>setToggle(false)}><Link to='/'>Roadmap</Link></li>
-                                <li onClick={()=>setToggle(false)}><Link to='/'>Community</Link></li>
+                                <li onClick={()=>setToggle(false)}><a href='#about'>About</a></li>
+                                <li onClick={()=>setToggle(false)}><a href='#roadmap'>Roadmap</a></li>
+                                <li onClick={()=>setToggle(false)}><a href='#community'>Community</a></li>
                                 <button onClick={()=>setToggle(false)} className="bg-pubblesGreen px-5 py-2 text-white rounded text-sm">Connect Wallet</button>
                             </ul>
                         </div>
