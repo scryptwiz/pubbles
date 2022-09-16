@@ -6,7 +6,7 @@ import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
 import Loader from "../components/Loader"
 import Navbar from "../components/Navbar"
-// import NewsLetter from "../components/NewsLetter"
+import NewsLetter from "../components/NewsLetter"
 import Roadmap from "../components/Roadmap"
 import SliderSection from "../components/SliderSection"
 import TeamSection from "../components/TeamSection"
@@ -59,7 +59,7 @@ const MainPage = () => {
         <TraitSections/>
         <Roadmap/>
         <TeamSection/>
-        {/* <NewsLetter/> */}
+        <NewsLetter/>
         <Footer/>
     </div>
   )

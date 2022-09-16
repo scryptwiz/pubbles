@@ -45,3 +45,12 @@
 .radius {
     border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
 }
+.zindex {
+    z-index: -1 ;
+}
+.zindexes {
+    z-index: 100;
+}
+.blueShadow {
+    box-shadow:  10px 10px #272A5E;
+}
