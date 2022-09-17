@@ -8,7 +8,7 @@ const TraitSections = () => {
             <h1 className="title text-pubblesBlue mx-auto text-4xl">Traits</h1>
             <div className="mt-7 flex justify-between items-center">
                 <div className="w-full md:w-1/2">
-                    <p className="md:text-sm lg:max-w-sm  text-xs text-pubblesBlue w-full">Building a thriving community that gives back through supporting girls and empowering</p>
+                    <p className="md:text-sm lg:max-w-sm text-center md:text-left  text-xs text-pubblesBlue w-full">Building a thriving community that gives back through supporting girls and empowering</p>
                     {allContent.traits&&(
                         <div className="w-full flex flex-wrap mt-10">
                             {allContent.traits[0].map((item,index)=>{

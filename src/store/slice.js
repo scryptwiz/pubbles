@@ -10,7 +10,8 @@ const initialState = {
     roadmap:false,
     team:false,
     newsLetter:false,
-    slider:false
+    slider:false,
+    socials:false
 }
 
 export const Slice = createSlice({
@@ -27,8 +28,9 @@ export const Slice = createSlice({
         setTeam: ( state, action ) => { state.team = { ...state.team, ...action.payload } },
         setNewsletter: ( state, action ) => { state.newsLetter = { ...state.newsLetter, ...action.payload } },
         setSlider: ( state, action ) => { state.slider = { ...state.slider, ...action.payload } },
+        setSocials: ( state, action ) => { state.socials = { ...state.socials, ...action.payload } },
     }
 })
 
-export const { setHeroSection, setAboutSection, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection, setRoadmap, setTeam, setNewsletter, setSlider } =  Slice.actions
+export const { setHeroSection, setAboutSection, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection, setRoadmap, setTeam, setNewsletter, setSlider,setSocials } =  Slice.actions
 export default Slice.reducer

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 const AboutSection = () => {
     const about = useSelector(state=>state.mainStore)
   return (
-    <div className="main_width px-5 py-10" id="about">
+    <div className="main_width px-5 pb-10" id="about">
         {about.aboutSection&&(
             <div className="max_width flex">
                 {about.aboutSection[0].map((item,index)=>{

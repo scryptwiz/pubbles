@@ -33,7 +33,6 @@ const SliderSection = () => {
     ]
   };
   const allContent = useSelector(state=>state.mainStore)
-  console.log(allContent)
   return (
         <div className="main_width px-5 py-10   ">
             <div className="max_width flex">

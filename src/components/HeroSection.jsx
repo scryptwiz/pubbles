@@ -11,10 +11,11 @@ const HeroSection = () => {
               <img src={item.fields.backgroundImage.fields.file.url}  alt={item.fields.backgroundImage.fields.title} className="w-full h-full absolute top-0 left-0 object-cover rounded-xl" />
               <div className="sm:px-10 px-3 z-10 sm:h-72 lg:h-96 h-full w-full flex">
                 <div className="my-auto h-fit py-5 flex flex-col md:gap-3 gap-2 sm:w-1/2 w-full">
-                  <h1 className="text-white title md:text-5xl lg:text-6xl sm:text-4xl text-2xl">{item.fields.title} </h1>
-                  <p className="text-sm dm_font text-white/80 lg:text-base">{item.fields.content}</p>
-                  <span className="flex gap-7 items-center">
-                    <button className="rounded-full px-7 text-sm  py-2 bg-pubblesGreen text-white">Explore</button>
+                  <h1 className="text-white title md:text-5xl lg:text-6xl sm:text-4xl text-5xl">{item.fields.title} </h1>
+                  <p className="text-sm dm_font text-white/80 lg:text-base w-10/12 md:w-full">{item.fields.content}</p>
+                  <img src={item.fields.image.fields.file.url}  alt={item.fields.image.fields.title}   className="ml-auto w-9/12 md:hidden flex " />
+                  <span className="flex md:gap-7 gap-3 items-center flex-col md:flex-row ">
+                    <button className="rounded-full px-16 md:px-7 text-sm  py-2 bg-pubblesGreen text-white">Explore</button>
                     <button className="outline-none text-sm bg-transparent underline text-white">Connect Wallet</button>
                   </span>
                 </div>

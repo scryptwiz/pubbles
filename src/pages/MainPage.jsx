@@ -12,7 +12,7 @@ import SliderSection from "../components/SliderSection"
 import TeamSection from "../components/TeamSection"
 import TraitEval from "../components/TraitEval"
 import TraitSections from "../components/TraitSections"
-import { setAboutSection, setHeroSection, setNewsletter, setRoadmap, setSlider, setTeam, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection } from "../store/slice"
+import { setAboutSection, setHeroSection, setNewsletter, setRoadmap, setSlider, setSocials, setTeam, setTraitEvalSection, setTraitImgSection, setTraitMainImgsSection, setTraitsSection } from "../store/slice"
 
 const MainPage = () => {
   const dispatch = useDispatch()
@@ -34,6 +34,7 @@ const MainPage = () => {
         const team  = await client.getEntries({ content_type: "team" })
         const newsLetter  = await client.getEntries({ content_type: "newsletter" })
         const slider  = await client.getEntries({ content_type: "slider" })
+        const socials  = await client.getEntries({ content_type: "socialMedia" })
         dispatch(setHeroSection([heroSection.items]))
         dispatch(setAboutSection([aboutSection.items]))
         dispatch(setTraitEvalSection([traitEval.items]))
@@ -44,6 +45,7 @@ const MainPage = () => {
         dispatch(setTeam([team.items]))
         dispatch(setNewsletter([newsLetter.items]))
         dispatch(setSlider([slider.items]))
+        dispatch(setSocials([socials.items]))
         setLoader(false)
     }
     getInfo()

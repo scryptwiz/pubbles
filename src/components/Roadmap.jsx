@@ -10,7 +10,10 @@ const Roadmap = () => {
               <h1 className="title text-4xl mx-auto text-pubblesBlue">Roadmap</h1>
               {allContent.roadmap[0].map((item,index)=>{
                 return (
-                    <img key={index} src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title}/>
+                  <div key={index} className='mt-10 md:mt-0'>
+                      <img src={item.fields.image.fields.file.url} className='hidden md:flex' alt={item.fields.image.fields.title}/>
+                      <img src={item.fields.mobileImage.fields.file.url} className='flex md:hidden' alt={item.fields.mobileImage.fields.title}/>
+                  </div>
                 )
               })}
           </div>
