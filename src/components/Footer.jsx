@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const Footer = () => {
     const allcontent = useSelector(state=>state.mainStore)
   return (
-    <div className="main_width relative mt-80 md:mt-0">
+    <div className="main_width relative mt-96 md:mt-0">
         <div className="max_width flex flex-col z-20 mt-10 lg:p-10 p-5 relative gap-3">
             <div className="flex justify-between md:items-center w-full flex-col-reverse md:flex-row gap-2">
                 <h1 className="title text-xl md:text-3xl text-pubblesBlue">Join Our Community</h1>
