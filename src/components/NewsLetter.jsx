@@ -9,7 +9,7 @@ const NewsLetter = () => {
                 <div className=" sm:w-1/2 w-9/12 md:w-full mx-auto md:h-fit h-full my-auto  relative">
                     <img src={allContent.newsLetter[0][0].fields.image.fields.file.url} className='z-20 lg:w-80 md:w-72 w-full' alt={allContent.newsLetter[0][0].fields.image.fields.title} />
                     <div className="bg-pubblesYellow blueShadow rounded w-full md:w-[90%] absolute top-1/2 md:top-10 right-0 zindex flex justify-between">
-                        <div className="lg:w-8/12 md:w-8/12 w-full py-5 px-3 md:px-5 md:px-10 ml-auto md:mt-0 mt-32">
+                        <div className="lg:w-8/12 md:w-8/12 w-full py-5 px-3 md:px-10 ml-auto md:mt-0 mt-32">
                             <h1 className="title lg:text-3xl text-2xl text-pubblesBlue">{allContent.newsLetter[0][0].fields.title}</h1>
                             <h1 className="dm_font text-pubblesBlue/80 mt-2">{allContent.newsLetter[0][0].fields.content}</h1>
                             <input type="text" placeholder="Email Here" className="text-pubblesBlue px-4 zindexes  rounded-full w-full py-2  z-40 mt-3 bg-white flex md:hidden" />
