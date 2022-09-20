@@ -24,11 +24,11 @@ const Footer = () => {
                             })}
                     </ul>
                 )}
-                <ul className="flex gap-3 flex-col md:flex-row md:items-center md:w-full w-full text-gray-600 text-sm mt-3 md:mt-0">
+                <ul className="flex gap-3 flex-col md:flex-row md:items-center md:w-fit w-full text-gray-600 text-sm mt-3 md:mt-0">
                     <li><a href='#about'>About</a></li>
                     <li><a href='#roadmap'>Roadmap</a></li>
                     <li><a href='#community'>Community</a></li>
-                    <li><button>Connect Wallet</button></li>
+                    <li><button className="w-28  text-center">Connect Wallet</button></li>
                 </ul>
             </div>
         </div>
